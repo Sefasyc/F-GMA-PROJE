@@ -1,0 +1,771 @@
+@charset "UTF-8";
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0-modified | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* make sure to set some focus styles for accessibility */
+:focus {
+  outline: 0;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+input[type=search]::-webkit-search-cancel-button,
+input[type=search]::-webkit-search-decoration,
+input[type=search]::-webkit-search-results-button,
+input[type=search]::-webkit-search-results-decoration {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+input[type=search] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  box-sizing: content-box;
+}
+
+textarea {
+  overflow: auto;
+  vertical-align: top;
+  resize: vertical;
+}
+
+/**
+ * Correct `inline-block` display not defined in IE 6/7/8/9 and Firefox 3.
+ */
+audio,
+canvas,
+video {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  max-width: 100%;
+}
+
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/**
+ * Address styling not present in IE 7/8/9, Firefox 3, and Safari 4.
+ * Known issue: no IE 6 support.
+ */
+[hidden] {
+  display: none;
+}
+
+/**
+ * 1. Correct text resizing oddly in IE 6/7 when body `font-size` is set using
+ *    `em` units.
+ * 2. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+html {
+  font-size: 100%; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+  -ms-text-size-adjust: 100%; /* 2 */
+}
+
+/**
+ * Address `outline` inconsistency between Chrome and other browsers.
+ */
+a:focus {
+  outline: thin dotted;
+}
+
+/**
+ * Improve readability when focused and also mouse hovered in all browsers.
+ */
+a:active,
+a:hover {
+  outline: 0;
+}
+
+/**
+ * 1. Remove border when inside `a` element in IE 6/7/8/9 and Firefox 3.
+ * 2. Improve image quality when scaled in IE 7.
+ */
+img {
+  border: 0; /* 1 */
+  -ms-interpolation-mode: bicubic; /* 2 */
+}
+
+/**
+ * Address margin not present in IE 6/7/8/9, Safari 5, and Opera 11.
+ */
+figure {
+  margin: 0;
+}
+
+/**
+ * Correct margin displayed oddly in IE 6/7.
+ */
+form {
+  margin: 0;
+}
+
+/**
+ * Define consistent border, margin, and padding.
+ */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+/**
+ * 1. Correct color not being inherited in IE 6/7/8/9.
+ * 2. Correct text not wrapping in Firefox 3.
+ * 3. Correct alignment displayed oddly in IE 6/7.
+ */
+legend {
+  border: 0; /* 1 */
+  padding: 0;
+  white-space: normal; /* 2 */
+  *margin-left: -7px; /* 3 */
+}
+
+/**
+ * 1. Correct font size not being inherited in all browsers.
+ * 2. Address margins set differently in IE 6/7, Firefox 3+, Safari 5,
+ *    and Chrome.
+ * 3. Improve appearance and consistency in all browsers.
+ */
+button,
+input,
+select,
+textarea {
+  font-size: 100%; /* 1 */
+  margin: 0; /* 2 */
+  vertical-align: baseline; /* 3 */
+  *vertical-align: middle; /* 3 */
+}
+
+/**
+ * Address Firefox 3+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+button,
+input {
+  line-height: normal;
+}
+
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Chrome, Safari 5+, and IE 6+.
+ * Correct `select` style inheritance in Firefox 4+ and Opera.
+ */
+button,
+select {
+  text-transform: none;
+}
+
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ * 4. Remove inner spacing in IE 7 without affecting normal text inputs.
+ *    Known issue: inner spacing remains in IE 6.
+ */
+button,
+html input[type=button],
+input[type=reset],
+input[type=submit] {
+  -webkit-appearance: button; /* 2 */
+  cursor: pointer; /* 3 */
+  *overflow: visible; /* 4 */
+}
+
+/**
+ * Re-set default cursor for disabled elements.
+ */
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+
+/**
+ * 1. Address box sizing set to content-box in IE 8/9.
+ * 2. Remove excess padding in IE 8/9.
+ * 3. Remove excess padding in IE 7.
+ *    Known issue: excess padding remains in IE 6.
+ */
+input[type=checkbox],
+input[type=radio] {
+  box-sizing: border-box; /* 1 */
+  padding: 0; /* 2 */
+  *height: 13px; /* 3 */
+  *width: 13px; /* 3 */
+}
+
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari 5 and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome
+ *    (include `-moz` to future-proof).
+ */
+input[type=search] {
+  -webkit-appearance: textfield; /* 1 */ /* 2 */
+  box-sizing: content-box;
+}
+
+/**
+ * Remove inner padding and search cancel button in Safari 5 and Chrome
+ * on OS X.
+ */
+input[type=search]::-webkit-search-cancel-button,
+input[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * Remove inner padding and border in Firefox 3+.
+ */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/**
+ * 1. Remove default vertical scrollbar in IE 6/7/8/9.
+ * 2. Improve readability and alignment in all browsers.
+ */
+textarea {
+  overflow: auto; /* 1 */
+  vertical-align: top; /* 2 */
+}
+
+/**
+ * Remove most spacing between table cells.
+ */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+html,
+button,
+input,
+select,
+textarea {
+  color: #222;
+}
+
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+img {
+  vertical-align: middle;
+}
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.chromeframe {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+body {
+  font-family: poppins;
+}
+
+.sıgn {
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  color: #0c66ee;
+}
+
+.the {
+  color: var(--FONT-BLACK, #222);
+  font-family: Poppins;
+  font-size: 4.25rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 5.125rem;
+}
+
+.fastest {
+  background: var(--GRA-Blue2, linear-gradient(169deg, #3984f4 -6.01%, #0cd3ff 36.87%, #2f7cf0 78.04%, #0e65e8 103.77%));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: Poppins;
+  font-size: 4.25rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 5.125rem;
+}
+
+.crypto {
+  color: var(--FONT-BLACK, #222);
+  font-family: Poppins;
+  font-size: 4.25rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 5.125rem;
+}
+
+.buy {
+  color: var(--FONT-SECONDARY, #666);
+  font-family: Poppins;
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.875rem;
+}
+
+.buy-trade {
+  color: var(--FONT-BLACK, #222);
+  font-family: Poppins;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 52px;
+}
+
+.buy-trade-on {
+  padding-left: 8rem;
+  padding-bottom: 8rem;
+}
+
+.buy-now {
+  color: var(--FONT-SECONDARY, #666);
+  font-family: Poppins;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 30px;
+}
+
+.trusted {
+  color: var(--FONT-BLACK, #222);
+  text-align: center;
+  font-family: Poppins;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.were {
+  color: var(--FONT-SECONDARY, #666);
+  text-align: center;
+  font-family: Poppins;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.Introducing {
+  color: var(--FONT-BLACK, #222);
+  font-family: Poppins;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 52px;
+}
+
+.nefa {
+  background: var(--GRA-Blue2, linear-gradient(169deg, #3984f4 -6.01%, #0cd3ff 36.87%, #2f7cf0 78.04%, #0e65e8 103.77%));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: Poppins;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 52px;
+}
+
+.professional {
+  color: var(--FONT-BLACK, #222);
+  font-family: Poppins;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.we {
+  color: #666;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 26px;
+}
+
+li {
+  margin-top: 1rem;
+}
+
+.alt-footer {
+  margin-top: 5rem;
+  margin-bottom: 3rem;
+}
+
+.footer-1 {
+  flex-wrap: wrap;
+}
+
+.footer-2 {
+  flex-grow: 1;
+  flex-basis: 300px;
+}
+
+#header {
+  background: url("../../assets/image/büyük-resim/Hero.png.url");
+  min-height: 850px;
+}
+
+.border-1 {
+  border: solid 30px;
+  border-radius: 2.5rem;
+  border: white;
+  background-color: white;
+  padding: 50px 0;
+  transform: translateY(-60px);
+}
+
+.more {
+  text-decoration: none;
+}
+
+.border-hight {
+  border-right: 1px solid rgba(128, 128, 128, 0.5);
+  min-height: 100%;
+}
+
+.border-b {
+  border-bottom: 1px solid rgba(128, 128, 128, 0.5);
+}
+
+.orta {
+  min-height: 650px;
+}
+
+.border-2 {
+  border: solid 30px;
+  border-radius: 2.5rem;
+  min-height: 350px;
+  border: white;
+  background-color: #f4f6fa;
+  padding: 50px;
+}
+
+.buy-1 {
+  padding-left: 10rem;
+}
+
+#header-5 {
+  min-height: 550px;
+}
+
+.header-5 {
+  margin-top: 3rem;
+}
+
+.border-3 {
+  min-height: 700px;
+  background-color: #f8fbff;
+  border-radius: 2.5rem;
+  padding-top: 50px;
+}
+
+.group-68-col {
+  margin-left: 100px;
+  margin-bottom: 50px;
+}
+
+.border-4 {
+  min-height: 550px;
+  background-color: #f9fbfe;
+  border-radius: 2.5rem;
+  padding-top: 50px;
+}
+
+#acordion {
+  min-height: 700px;
+}
+
+.my-gradient {
+  background-image: url(/assets/image/büyük-resim/Hero.png) !important;
+}
+
+.pls {
+  color: #28c165;
+}
+
+.pls-x {
+  color: #f4574d;
+}
+
+.navbar {
+  text-align: center !important;
+  background: url("../../assets/image/büyük-resim/Hero.png.url");
+}
+
+.navbar-nav {
+  display: inline-flex;
+  padding: 0.625rem;
+  gap: 3.75rem;
+  font-size: 1.125rem;
+}
+
+.btn-log {
+  margin-left: 10px;
+}
+
+.btn-get {
+  width: 170px;
+}
+
+.btn-back-1 {
+  margin-top: 3rem;
+}
+
+.btn-back-1 {
+  width: 11rem;
+  height: 3rem;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  color: #666666;
+  background: #fafafa;
+}
+
+.star {
+  width: 2.5rem;
+  position: absolute;
+  bottom: 580px;
+  left: 600px;
+  height: 50px;
+}
+
+.ellipse {
+  position: absolute;
+  bottom: 175px;
+  left: 100px;
+  width: 48px;
+}
+
+.buy {
+  width: 100%;
+  transform: scale(1.5);
+}
+
+.credit-card {
+  width: 600px;
+}
+
+.group-68 {
+  width: 100%;
+  transform: scale(0.8);
+}
+
+.ok {
+  padding-bottom: 5rem;
+}
+
+.group-69 {
+  width: 600px;
+}
+
+.security {
+  width: 700px;
+}
+
+@media (max-width: 576px) {
+  #header {
+    text-align: center;
+    line-height: 2.625rem;
+    letter-spacing: -0.02125rem;
+    height: 900px;
+    font-size: 0.875rem;
+  }
+  .btn {
+    width: 310px;
+    height: 58px;
+    margin-top: 10px;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+  }
+  .btn-get {
+    width: 328px;
+    height: 60px;
+    margin-left: 20px;
+    text-align: center;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .btn-mail {
+    width: 45px;
+    height: 55px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3px;
+  }
+  .btn-back-1 {
+    width: auto;
+  }
+  .form-control {
+    display: flex;
+    width: 260px;
+    height: 55px;
+    padding: 10px 10px 10px 14px;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+    margin-top: 3px;
+  }
+  .learn {
+    display: block;
+    font-size: 15px;
+    text-align: center;
+    text-decoration-line: underline;
+    margin-top: 15px;
+    margin-right: 40px;
+  }
+  .buyuk-resim {
+    display: none;
+  }
+  .the-fast-crypto {
+    text-align: center;
+    font-family: Poppins;
+    font-size: 2.125rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 2.625rem; /* 123.529% */
+    letter-spacing: -0.02125rem;
+  }
+  .navbar {
+    padding-top: 10px;
+    padding-bottom: 120px;
+  }
+  .buy {
+    width: 150px;
+  }
+  .buy-trade {
+    padding-right: 30px;
+  }
+  .price {
+    font-size: 13px;
+  }
+  .footer-2 {
+    margin-bottom: px;
+  }
+}
+@media (max-width: 576px) and (max-width: 768px) {
+  #header {
+    text-align: center;
+    line-height: 2.625rem;
+    letter-spacing: -0.02125rem;
+    height: 900px;
+    font-size: 0.875rem;
+    justify-content: center;
+  }
+  .the-fast-crypto {
+    text-align: center;
+    font-family: Poppins;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 2.625rem; /* 123.529% */
+    letter-spacing: -0.02125rem;
+  }
+  .navbar {
+    padding-top: 50px;
+  }
+}
+@media (max-width: 992px) {
+  .sefa {
+    flex-direction: column-reverse;
+  }
+}
+* {
+  padding: 0px;
+  margin: 0px;
+}
+
+.container {
+  max-width: 1650px;
+  padding-left: 3rem;
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,18 @@
+@use "../abstracts/mixins" as m;
+.btn-log {
+  margin-left: 10px;
+}
+.btn-get {
+  width: 170px;
+}
+.btn-back-1 {
+  margin-top: 3rem;
+}
+.btn-back-1 {
+  width: 11rem;
+  height: 3rem;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  color: #666666;
+  background: #fafafa;
+}

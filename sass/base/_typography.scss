@@ -1,0 +1,142 @@
+body{
+  font-family:poppins;
+}
+
+.sıgn {
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  color: #0c66ee;
+}
+
+.the {
+  color: var(--FONT-BLACK, #222);
+  font-family: Poppins;
+  font-size: 4.25rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 5.125rem;
+}
+
+.fastest {
+  background: var(
+    --GRA-Blue2,
+    linear-gradient(
+      169deg,
+      #3984f4 -6.01%,
+      #0cd3ff 36.87%,
+      #2f7cf0 78.04%,
+      #0e65e8 103.77%
+    )
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: Poppins;
+  font-size: 4.25rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 5.125rem;
+}
+
+.crypto {
+  color: var(--FONT-BLACK, #222);
+  font-family: Poppins;
+  font-size: 4.25rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 5.125rem;
+}
+
+.buy {
+  color: var(--FONT-SECONDARY, #666);
+  font-family: Poppins;
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.875rem;
+}
+.buy-trade {
+  color: var(--FONT-BLACK, #222);
+  font-family: Poppins;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 52px;
+}
+.buy-trade-on {
+  padding-left: 8rem;
+  padding-bottom: 8rem;
+}
+.buy-now {
+  color: var(--FONT-SECONDARY, #666);
+  font-family: Poppins;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 30px;
+}
+.trusted {
+  color: var(--FONT-BLACK, #222);
+  text-align: center;
+  font-family: Poppins;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.were {
+  color: var(--FONT-SECONDARY, #666);
+  text-align: center;
+  font-family: Poppins;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.Introducing {
+  color: var(--FONT-BLACK, #222);
+  font-family: Poppins;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 52px;
+}
+.nefa {
+  background: var(
+    --GRA-Blue2,
+    linear-gradient(
+      169deg,
+      #3984f4 -6.01%,
+      #0cd3ff 36.87%,
+      #2f7cf0 78.04%,
+      #0e65e8 103.77%
+    )
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: Poppins;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 52px;
+}
+.professional {
+  color: var(--FONT-BLACK, #222);
+  font-family: Poppins;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.we {
+  color: #666;
+
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 26px;
+}

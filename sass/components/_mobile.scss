@@ -1,0 +1,115 @@
+@media (max-width: 576px) {
+  #header {
+    text-align: center;
+    line-height: 2.625rem;
+    letter-spacing: -0.02125rem;
+    height: 900px;
+    font-size: 0.875rem;
+  }
+  .btn {
+    width: 310px;
+    height: 58px;
+    margin-top: 10px;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+  }
+  .btn-get {
+    width: 328px;
+    height: 60px;
+    margin-left: 20px;
+    text-align: center;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .btn-mail {
+    width: 45px;
+    height: 55px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3px;
+  }
+  .btn-back-1{
+    width: auto;
+  }
+  .form-control {
+    display: flex;
+    width: 260px;
+    height: 55px;
+    padding: 10px 10px 10px 14px;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+    margin-top: 3px;
+  }
+  .learn {
+    display: block;
+    font-size: 15px;
+    text-align: center;
+    text-decoration-line: underline;
+    margin-top: 15px;
+    margin-right: 40px;
+  }
+  .buyuk-resim {
+    display: none;
+  }
+
+  .the-fast-crypto {
+    text-align: center;
+    font-family: Poppins;
+    font-size: 2.125rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 2.625rem; /* 123.529% */
+    letter-spacing: -0.02125rem;
+  }
+
+  .navbar {
+    padding-top: 10px;
+    padding-bottom: 120px;
+  }
+
+  .buy {
+    width: 150px;
+  }
+  .buy-trade {
+    padding-right: 30px;
+  }
+  .price {
+    font-size: 13px;
+  }
+  .footer-2{
+    margin-bottom: px;
+  }
+
+  @media (max-width: 768px) {
+    #header {
+      text-align: center;
+      line-height: 2.625rem;
+      letter-spacing: -0.02125rem;
+      height: 900px;
+      font-size: 0.875rem;
+      justify-content: center;
+    }
+    .the-fast-crypto {
+      text-align: center;
+      font-family: Poppins;
+      font-size: 1.5rem;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 2.625rem; /* 123.529% */
+      letter-spacing: -0.02125rem;
+    }
+
+    .navbar {
+      padding-top: 50px;
+    }
+  }
+}
+@media (max-width: 992px) {
+  .sefa {
+    flex-direction: column-reverse;
+  }
+}
